@@ -135,6 +135,15 @@ const translations = {
     "fr": "Grossis!",
     "vn": "Phát triển!",
   },
+  "games-title": {
+    "en": "PLAY WITH <span>POOT</span>",
+    "zh-tw": "PLAY WITH <span>POOT</span>",
+    "zh": "PLAY WITH <span>POOT</span>",
+    "id": "PLAY WITH <span>POOT</span>",
+    "ro": "PLAY WITH <span>POOT</span>",
+    "fr": "PLAY WITH <span>POOT</span>",
+    "vn": "PLAY WITH <span>POOT</span>",
+  },
   "build-generate": {
     "en": "Generate!",
     "zh-tw": "生成！",

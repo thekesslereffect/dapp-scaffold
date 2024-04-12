@@ -213,6 +213,7 @@ k.scene("game", () => {
       font: "Jua", 
       align: "center",
     }),
+    
     k.anchor("center"),
     k.pos(k.width()/2,k.height()/6),
     k.z(100),
@@ -589,6 +590,7 @@ k.scene("gameover", (score) => {
         align: "center",
       }
     ),
+    
     k.z(100),
     k.anchor("center"),
     k.pos(k.width()/2,k.height()/2),

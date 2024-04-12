@@ -1,6 +1,7 @@
 // Next, React
 import { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Wallet
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
@@ -11,7 +12,7 @@ import pkg from '../../../package.json';
 
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
-import Image from 'next/image';
+
 
 import { useLanguage } from 'contexts/LanguageContextProvider';
 import translations from '../../../public/assets/js/translations'; // Adjust the path as necessary
@@ -24,15 +25,27 @@ export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
   const { connection } = useConnection();
 
-  const balance = useUserSOLBalanceStore((s) => s.balance)
-  const { getUserSOLBalance } = useUserSOLBalanceStore()
+  const balance = useUserSOLBalanceStore((s) => s.balance);
+  const { getUserSOLBalance } = useUserSOLBalanceStore();
 
   useEffect(() => {
     if (wallet.publicKey) {
-      console.log(wallet.publicKey.toBase58())
-      getUserSOLBalance(wallet.publicKey, connection)
+      console.log(wallet.publicKey.toBase58());
+      getUserSOLBalance(wallet.publicKey, connection);
     }
-  }, [wallet.publicKey, connection, getUserSOLBalance])
+  }, [wallet.publicKey, connection, getUserSOLBalance]);
+
+
+  // Games array and links to their pages/images
+   const games = [
+      { link: '/flappyPoot',name:'Flappy Poot', imageUrl: '/assets/games/flappypoot/FlappyPoot.png' },
+      { link: '/path2',name:'Poot Runner : Coming Soon!', imageUrl: '' },
+      { link: '/path3',name:'Game 3', imageUrl: '' },
+      { link: '/path4',name:'Game 4', imageUrl: '' },
+      { link: '/path5',name:'Game 5', imageUrl: '' },
+      // { link: '/path6',name:'Game 6', imageUrl: '' },
+      // { link: '/path7',name:'Game 7', imageUrl: '' },
+   ];
 
    // State for the current language
    const { language } = useLanguage();
@@ -100,6 +113,41 @@ export const HomeView: FC = ({ }) => {
                </div>
             </div>
          </section>
+
+         <div className="spacer"></div>
+         <section className="flex flex-col max-w-3xl mx-auto">
+         <h2 className="contact__title section__title">
+            <p dangerouslySetInnerHTML={{ __html: translations["games-title"][language] }} />
+         </h2>
+
+      <div className="grid auto-rows-[200px] grid-cols-1 md:grid-cols-3 gap-4">
+        {games.map((game, i) => (
+          <Link key={i} href={game.link} passHref className={`relative flex items-end p-6 row-span-1 rounded-3xl overflow-hidden hover:rotate-0 hover:-translate-y-2 transition ease-in-out duration-300 border-dashed border-4 border-white ${
+            [3,6].includes(i) ? "md:col-span-2 -rotate-1" : "rotate-1"
+          }`}>
+            {game.imageUrl ? (
+               <>
+              <Image
+                  src={game.imageUrl}
+                  alt={`Link to ${game.link}`}
+                  fill
+                  quality={100}
+                  style={{objectFit:"cover", padding:"1rem", borderRadius:"1.5rem"}}
+              />
+              <div className='z-10 text-2xl'>{game.name}</div>
+              </>
+            ) : (
+              <div className='flex items-end h-full w-full bg-[var(--body-color-dark)] rounded-xl p-4'>
+               <div className='z-10 text-2xl'>{game.name}</div>   
+            </div>
+            )}
+            
+         
+          </Link>
+        ))}
+      </div>
+    </section>
+
 
 
          <div className="spacer"></div>

@@ -30,7 +30,7 @@ export const AppBar: React.FC = () => {
       </div>
       <div className={`w-full block  float-right gap-10 lg:flex lg:items-center lg:w-auto ${isMobileMenuOpen ? "flex flex-col items-center " : "hidden"}`}>
  
-          <Link href="/" passHref onClick={() => setIsMobileMenuOpen(false)}>
+          {/* <Link href="/" passHref onClick={() => setIsMobileMenuOpen(false)}>
             <div  className="block mt-4 lg:inline-block lg:mt-0 mr-4">
               Home
             </div>
@@ -39,7 +39,7 @@ export const AppBar: React.FC = () => {
             <div className="block mt-4 lg:inline-block lg:mt-0">
               FlappyPoot
             </div>
-          </Link>
+          </Link> */}
         
         <div>
           <select onChange={(e) => setLanguage(e.target.value)} className="block lg:inline-block lg:mt-0 ">

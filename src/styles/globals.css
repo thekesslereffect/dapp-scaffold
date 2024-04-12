@@ -51,6 +51,7 @@
   --white-color: hsl(228, 8%, 98%);
   --black-color: hsl(0, 5%, 4%);
   --body-color: hsl(41, 84%, 50%);
+  --body-color-dark: hsl(34, 100%, 44%);
   /* --body-color: hsl(180, 33%, 97%); */
   --container-color: hsl(228, 6%, 12%);
   --shadow-img: 0 0 48px hsla(11, 61%, 33%, 0.4);
@@ -161,7 +162,6 @@ p span{
 
 .section {
   padding-block: 5rem 1rem;
-  
 }
 
 .section__title {
@@ -463,6 +463,9 @@ option{
   color: var(--first-color);
 
 }
+
+
+
 
 /*=============== BUILD A POOT ===============*/
 .build__container{
