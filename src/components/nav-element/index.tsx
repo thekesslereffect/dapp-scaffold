@@ -23,21 +23,7 @@ const NavElement = ({
     disabled,
     navigationStarts = () => {},
 }: NavElementProps) => {
-    const router = useRouter();
-    const isActive = href === router.asPath || (as && as === router.asPath);
     const divRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        if (divRef.current) {
-            divRef.current.className = cn(
-                'h-0.5 w-1/4 transition-all duration-300 ease-out',
-                isActive
-                    ? '!w-full bg-gradient-to-l from-fuchsia-500 to-pink-500 '
-                    : 'group-hover:w-1/2 group-hover:bg-fuchsia-500',
-            );
-        }
-    }, [isActive]);
-
     return (
         <Link
             href={href}
