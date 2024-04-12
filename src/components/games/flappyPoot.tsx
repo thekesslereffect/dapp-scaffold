@@ -138,7 +138,7 @@ k.scene("start", () => {
             {
               size: FONT_SIZE*GAME_SCALE,
               width: 340,
-              font: "font",
+              font: "Jua",
               align: "center",
           }),
           k.z(100),
@@ -164,7 +164,7 @@ k.scene("start", () => {
           {
             size: FONT_SIZE*GAME_SCALE,
             width: 340,
-            font: "font",
+            font: "Jua",
             align: "center",
         }),
         k.z(100),
@@ -210,7 +210,7 @@ k.scene("game", () => {
     k.text(score.toString(), {
       size: SCORE_FONT_SIZE*GAME_SCALE,
       width: 340, // it'll wrap to next line when width exceeds this value
-      font: "font", 
+      font: "Jua", 
       align: "center",
     }),
     k.anchor("center"),
@@ -585,7 +585,7 @@ k.scene("gameover", (score) => {
       {
         size: FONT_SIZE*GAME_SCALE, // 48 pixels tall
         width: 340, // it'll wrap to next line when width exceeds this value
-        font: "font", // specify any font you loaded or browser built-in
+        font: "Jua", // specify any font you loaded or browser built-in
         align: "center",
       }
     ),
