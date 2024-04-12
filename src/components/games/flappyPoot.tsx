@@ -151,9 +151,9 @@ k.scene("start", () => {
       k.onMousePress("left", () => {
         k.go("game");
       });
-      k.onTouchStart(() => {
-        k.go("game");
-      });
+      // k.onTouchStart(() => {
+      //   k.go("game");
+      // });
     } else{
       k.add([
         k.text(
@@ -179,9 +179,9 @@ k.scene("start", () => {
         k.onMousePress("left", () => {
           k.go("game");
         });
-        k.onTouchStart(() => {
-          k.go("game");
-        });
+        // k.onTouchStart(() => {
+        //   k.go("game");
+        // });
     }
 });
 
@@ -200,7 +200,7 @@ k.scene("game", () => {
     console.log("Stopping music");
     backgroundMusic.stop();  // Attempt to stop the music
   }
-  
+
   backgroundMusic = k.play("music", {
     volume: 0.3,
     loop: true
@@ -507,9 +507,9 @@ k.onUpdate(() => {
   k.onMousePress("left", () => {
     playerJump();
   });
-  k.onTouchStart(() => {
-    playerJump();
-  });
+  // k.onTouchStart(() => {
+  //   playerJump();
+  // });
 
   // Debug
   k.onKeyPress("d", () => {
@@ -602,9 +602,9 @@ k.scene("gameover", (score) => {
   k.onMousePress("left", () => {
     k.go("game");
   });
-  k.onTouchStart(() => {
-    k.go("game");
-  });
+  // k.onTouchStart(() => {
+  //   k.go("game");
+  // });
 
 });
 
