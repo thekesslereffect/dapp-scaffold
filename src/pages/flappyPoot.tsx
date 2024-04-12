@@ -6,7 +6,7 @@ const FlappyPoot: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Solana Scaffold</title>
+        <title>Poot Coin</title>
         <meta
           name="flappy poot"
           content="Flappy Poot"
