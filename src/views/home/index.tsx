@@ -51,11 +51,11 @@ export const HomeView: FC = ({ }) => {
                   </h1>
                   <p dangerouslySetInnerHTML={{ __html: translations["home-description"][language] }} className="home__description"/>
                   <div className="home__buttons">
-                     <a  href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank" className="button-primary">
+                     <a  href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank" rel="noreferrer" className="button-primary">
                         <p dangerouslySetInnerHTML={{ __html: translations["home-button-main"][language] }} />
                      </a>
                      <div className="home__stack">
-                        <a href="https://poot-coin.gitbook.io/poot-coin-docs/fundamentals/roadmap" target="_blank" className="button-secondary">
+                        <a href="https://poot-coin.gitbook.io/poot-coin-docs/fundamentals/roadmap" target="_blank" rel="noreferrer" className="button-secondary">
                            <p dangerouslySetInnerHTML={{ __html: translations["home-button-secondary"][language] }} />
                         </a>
                      </div>
@@ -185,19 +185,19 @@ export const HomeView: FC = ({ }) => {
                      </h3>
 
                      <div className="contact__social justify-center items-center">
-                        <a href="https://t.me/pootcoin" target="_blank">
+                        <a href="https://t.me/pootcoin" target="_blank" rel="noreferrer">
                            <i className="ri-telegram-fill text-white"></i>
                         </a>
-                        <a href="https://twitter.com/pootcoinsol" target="_blank">
+                        <a href="https://twitter.com/pootcoinsol" target="_blank" rel="noreferrer">
                            <i className="ri-twitter-x-fill text-white"></i>
                         </a>
-                        <a href="https://solscan.io/token/CErSpNnEHUNsNw3AZJhyvekwhMpr9H3W2S71uA3pzJus" target="_blank">
+                        <a href="https://solscan.io/token/CErSpNnEHUNsNw3AZJhyvekwhMpr9H3W2S71uA3pzJus" target="_blank" rel="noreferrer">
                            <img src="assets/img/solscan.png" alt="image" className="contact__icon"/>
                         </a>
-                        <a href="https://www.dextools.io/app/en/solana/pair-explorer/BynsX139gT2wv3mDqZFJji5YU1zsr8uUP3fdApgHjJE8?t=1711155292917" target="_blank">
+                        <a href="https://www.dextools.io/app/en/solana/pair-explorer/BynsX139gT2wv3mDqZFJji5YU1zsr8uUP3fdApgHjJE8?t=1711155292917" target="_blank" rel="noreferrer">
                            <img src="assets/img/DEXTools.png" alt="image" className="contact__icon"/>
                         </a>
-                        <a href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank">
+                        <a href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank" rel="noreferrer">
                            <img src="assets/img/dexscreener.png" alt="image" className="contact__icon"/>
                         </a>
                      </div>
