@@ -25,7 +25,7 @@ const FlappyPootGame = () => {
   let BUSH_PARALLAX = 1.2;
   let BUILDING_PARALLAX = 3;
   
-  let PIPE_SPACING = 20;
+  let PIPE_SPACING = 14;
   let PIPE_GAP_MIN = 200;
   let PIPE_GAP_MAX = 300;
   let PIPE_RANDOM_Y = 240;
