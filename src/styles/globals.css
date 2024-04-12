@@ -3,11 +3,21 @@
 @tailwind utilities;
 /*=============== GOOGLE FONTS ===============*/
 /* Default */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Sniglet:wght@400;800&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Sniglet:wght@400;800&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap'); */
 /* custom Chinese fonts */
 @font-face {
   font-family: 'zh';
   src: url('/assets/fonts/chinese/AR-TianniuB5.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Jua';
+  src: url('/assets/fonts/Jua-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Sniglet';
+  src: url('/assets/fonts/Sniglet-ExtraBold.woff2') format('woff2');
 }
 
 @font-face {
@@ -26,6 +36,8 @@
   font-family: 'zen-black';
   src: url('/assets/fonts/chinese/ZenMaruGothic-Black.woff2') format('woff2');
 }
+
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
