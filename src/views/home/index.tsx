@@ -39,7 +39,7 @@ export const HomeView: FC = ({ }) => {
 
   return (
     <div className="flex flex-col p-4">
-      <div className="flex flex-col">
+      <div className="">
 
         <div className='mt-6'>       
          <section className="home section" id="home">
