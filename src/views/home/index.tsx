@@ -39,10 +39,10 @@ export const HomeView: FC = ({ }) => {
   // Games array and links to their pages/images
    const games = [
       { link: '/flappyPoot',name:'Flappy Poot', imageUrl: '/assets/games/flappypoot/FlappyPoot.png' },
-      { link: '/path2',name:'Poot Runner : Coming Soon!', imageUrl: '' },
-      { link: '/path3',name:'Game 3', imageUrl: '' },
-      { link: '/path4',name:'Game 4', imageUrl: '' },
-      { link: '/path5',name:'Game 5', imageUrl: '' },
+      { link: '/',name:'Poot Runner : Coming Soon!', imageUrl: '' },
+      { link: '/',name:'Game 3', imageUrl: '' },
+      { link: '/',name:'Game 4', imageUrl: '' },
+      { link: '/',name:'Game 5', imageUrl: '' },
       // { link: '/path6',name:'Game 6', imageUrl: '' },
       // { link: '/path7',name:'Game 7', imageUrl: '' },
    ];
