@@ -4,11 +4,15 @@ import kaboom from 'kaboom';
 import { useWallet } from '@solana/wallet-adapter-react';
 
 
+  
+  
 
 const FlappyPootGame = () => {
   const { publicKey  } = useWallet();
   const gameInitialized = useRef(false);
   let highScore = parseInt(localStorage.getItem("flappyPootHighScore") || "0");
+
+  let backgroundMusic;
   let GAME_SCALE = 0;
   let GROUND_SPEED_NEW = 0;
   let PIPE_SPACING_NEW = 0;
@@ -137,6 +141,7 @@ k.scene("start", () => {
               font: "font",
               align: "center",
           }),
+          k.z(100),
           k.anchor("center"),
           k.pos(k.width()/2, k.height()/2),
       ]);
@@ -162,6 +167,7 @@ k.scene("start", () => {
             font: "font",
             align: "center",
         }),
+        k.z(100),
         k.anchor("center"),
         k.pos(k.width()/2, k.height()/2),
         ]);
@@ -189,7 +195,13 @@ k.scene("game", () => {
   GROUND_SPEED_NEW = GROUND_SPEED * GAME_SCALE;
   PIPE_SPACING_NEW = PIPE_SPACING / GAME_SCALE;
 
-  const backgroundMusic = k.play("music", {
+  // Start playing the background music and store the handle
+  if (backgroundMusic) {
+    console.log("Stopping music");
+    backgroundMusic.stop();  // Attempt to stop the music
+  }
+  
+  backgroundMusic = k.play("music", {
     volume: 0.3,
     loop: true
   });
@@ -203,7 +215,7 @@ k.scene("game", () => {
     }),
     k.anchor("center"),
     k.pos(k.width()/2,k.height()/6),
-    k.z(1),
+    k.z(100),
   ]);
 
   function setupBackground() {
@@ -473,10 +485,12 @@ k.onUpdate(() => {
     player.play("dead");
     
 
-    // Stop the background music when the player dies
-  if (backgroundMusic) {
-    backgroundMusic.stop();  // This stops the music playback
-  }
+    if (backgroundMusic) {
+      console.log("Stopping music");
+      backgroundMusic.stop();  // Attempt to stop the music
+    } else {
+      console.log("Music handle not found");
+    }
     
     k.wait(1, () => {
       const storedHighScore = parseInt(localStorage.getItem("flappyPootHighScore") || "0");
@@ -567,7 +581,6 @@ k.scene("gameover", (score) => {
       "Gameover!\n"
       + "Score: " + score
       + "\nHigh Score: " + highScore 
-      + `\n\nWallet: ${publicKey }`
       ,
       {
         size: FONT_SIZE*GAME_SCALE, // 48 pixels tall
@@ -576,6 +589,7 @@ k.scene("gameover", (score) => {
         align: "center",
       }
     ),
+    k.z(100),
     k.anchor("center"),
     k.pos(k.width()/2,k.height()/2),
   ]);

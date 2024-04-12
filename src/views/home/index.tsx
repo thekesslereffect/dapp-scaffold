@@ -38,8 +38,8 @@ export const HomeView: FC = ({ }) => {
    const { language } = useLanguage();
 
   return (
-    <div className="hero mx-auto p-4">
-      <div className="hero-content flex flex-col">
+    <div className="flex flex-col p-4">
+      <div className="flex flex-col">
 
         <div className='mt-6'>       
          <section className="home section" id="home">
