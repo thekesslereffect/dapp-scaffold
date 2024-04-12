@@ -25,11 +25,11 @@ const FlappyPootGame = () => {
   let BUSH_PARALLAX = 1.2;
   let BUILDING_PARALLAX = 3;
   
-  let PIPE_SPACING = 14;
-  let PIPE_GAP_MIN = 200;
-  let PIPE_GAP_MAX = 300;
-  let PIPE_RANDOM_Y = 240;
-  let JUMP_FORCE = 500;
+  let PIPE_SPACING = 2;
+  let PIPE_GAP_MIN = 35;
+  let PIPE_GAP_MAX = 50;
+  let PIPE_RANDOM_Y = 30;
+  let JUMP_FORCE = 450;
 
   const startGame = () => {
     const k = kaboom({
@@ -193,7 +193,7 @@ k.scene("game", () => {
   let score = 0;
   k.setGravity(1600);
   GROUND_SPEED_NEW = GROUND_SPEED * GAME_SCALE;
-  PIPE_SPACING_NEW = PIPE_SPACING / GAME_SCALE;
+  PIPE_SPACING_NEW = PIPE_SPACING ;
 
   // Start playing the background music and store the handle
   if (backgroundMusic) {
@@ -357,9 +357,9 @@ k.onUpdate(() => {
   player.play("idle");
 
   function producePipes(){
-    const offset = k.rand(PIPE_RANDOM_Y*-1, PIPE_RANDOM_Y);
+    const offset = k.rand(PIPE_RANDOM_Y*-1*GAME_SCALE, PIPE_RANDOM_Y*GAME_SCALE);
     // Randomly choose a PIPE_GAP within the specified range
-    const PIPE_GAP = k.rand(PIPE_GAP_MIN, PIPE_GAP_MAX);
+    const PIPE_GAP = k.rand(PIPE_GAP_MIN*GAME_SCALE, PIPE_GAP_MAX*GAME_SCALE);
 
     k.add([
       k.sprite("pipe"),
