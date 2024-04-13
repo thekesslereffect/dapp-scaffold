@@ -1,11 +1,7 @@
-import { FC, useState, useEffect } from 'react';
-import Image from 'next/image';
-
+import React, { FC, useState, useRef, useEffect } from 'react';
 import { useLanguage } from 'contexts/LanguageContextProvider';
-import translations from '../../public/assets/js/translations'; // Adjust the path as necessary
-
+import translations from '../../public/assets/js/translations';
 import html2canvas from 'html2canvas';
-
 
 // Define a type for the category structure
 type Category = {
@@ -113,15 +109,6 @@ const generatePFP = () => {
           id={category}
           style={{ position: 'absolute', width: '100%', height: 'auto' }} // Adjust styling as needed
         />
-        // Next Image is broken with html2canvas
-        // <Image
-        //   key={category}
-        //   src={categories[category].images[categories[category].currentIndex]}
-        //   alt={category}
-        //   id={category}
-        //   fill={true}
-        //   className='absolute'
-        // />
       ))}
       </div>
     </div>

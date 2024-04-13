@@ -15,7 +15,7 @@ export const SignMessage: FC = () => {
             // `signMessage` will be undefined if the wallet doesn't support it
             if (!signMessage) throw new Error('Wallet does not support message signing!');
             // Encode anything as bytes
-            const message = new TextEncoder().encode('Hello, world!');
+            const message = new TextEncoder().encode('Sign In!');
             // Sign the bytes using the wallet
             const signature = await signMessage(message);
             // Verify that the bytes were signed using the private key that matches the known public key

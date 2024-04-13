@@ -3,6 +3,7 @@ import { FC } from "react";
 import { SignMessage } from '../../components/SignMessage';
 import { SendTransaction } from '../../components/SendTransaction';
 import { SendVersionedTransaction } from '../../components/SendVersionedTransaction';
+import SubmitScoreTest from "components/SubmitScoreTest";
 
 export const BasicsView: FC = ({ }) => {
 
@@ -17,6 +18,7 @@ export const BasicsView: FC = ({ }) => {
           <SignMessage />
           <SendTransaction />
           <SendVersionedTransaction />
+          {/* <SubmitScoreTest/> */}
         </div>
       </div>
     </div>
