@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import dbConnect from '../../../../lib/mongodb';
-import Score from '../../../../models/Score';
+import dbConnect from 'lib/mongodb';
+import Score from 'models/Score';
 
 export default async function handler(
   req: NextApiRequest,

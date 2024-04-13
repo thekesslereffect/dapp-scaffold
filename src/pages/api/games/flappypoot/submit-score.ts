@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import dbConnect from '../../../../lib/mongodb';
-import Score from '../../../../models/Score';
-import { verifySignature } from '../../../../utils/verifySignature'; // Ensure this is implemented correctly
+import dbConnect from 'lib/mongodb';
+import Score from 'models/Score';
+import { verifySignature } from 'utils/verifySignature'; // Ensure this is implemented correctly
 
 export default async function handler(
   req: NextApiRequest,
