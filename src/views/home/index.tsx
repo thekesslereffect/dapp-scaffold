@@ -21,6 +21,9 @@ import PfpGenerator from 'components/PFPGenerator';
 import 'remixicon/fonts/remixicon.css';
 
 
+// Jupiter swap
+import JupiterTerminalButton from 'components/JupiterTerminalButton';
+
 export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
   const { connection } = useConnection();
@@ -54,7 +57,7 @@ export const HomeView: FC = ({ }) => {
     <div className="flex flex-col p-4">
       <div className="">
 
-        <div className='mt-6'>       
+        <div className='mt-6'>  
          <section className="home section" id="home">
             <div className="home__container container grid">
                <Image src="/assets/img/home-poot.png" alt="image" width={200} height={200} className="home__img"/>
@@ -64,10 +67,14 @@ export const HomeView: FC = ({ }) => {
                   </h1>
                   <p dangerouslySetInnerHTML={{ __html: translations["home-description"][language] }} className="home__description"/>
                   <div className="home__buttons">
-                     <a  href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank" rel="noreferrer" className="button-primary">
+                     {/* <a  href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank" rel="noreferrer" className="button-primary">
                         <p dangerouslySetInnerHTML={{ __html: translations["home-button-main"][language] }} />
-                     </a>
+                     </a> */}
+                     <JupiterTerminalButton/>
+
+
                      <div className="home__stack">
+                        
                         <a href="https://poot-coin.gitbook.io/poot-coin-docs/fundamentals/roadmap" target="_blank" rel="noreferrer" className="button-secondary">
                            <p dangerouslySetInnerHTML={{ __html: translations["home-button-secondary"][language] }} />
                         </a>
