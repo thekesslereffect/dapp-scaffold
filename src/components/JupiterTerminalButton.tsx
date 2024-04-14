@@ -19,6 +19,7 @@ const JupiterTerminalButton: React.FC = () => {
                 initialInputMint: "So11111111111111111111111111111111111111112",
                 initialOutputMint: "CErSpNnEHUNsNw3AZJhyvekwhMpr9H3W2S71uA3pzJus",
             },
+            // containerClassName: 'flex-1 top-0 left-0 z-40 w-full h-full',
         });
 
         // Set terminal as ready to setup the event listener
