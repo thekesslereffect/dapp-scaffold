@@ -15,7 +15,7 @@ const JupiterTerminalButton: React.FC = () => {
             endpoint: RPC_ENDPOINT,
             strictTokenList: false,
             formProps: {
-                fixedOutputMint: true,
+                // fixedOutputMint: true,
                 initialInputMint: "So11111111111111111111111111111111111111112",
                 initialOutputMint: "CErSpNnEHUNsNw3AZJhyvekwhMpr9H3W2S71uA3pzJus",
             },
