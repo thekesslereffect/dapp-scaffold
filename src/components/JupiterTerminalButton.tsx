@@ -23,28 +23,28 @@ const JupiterTerminalButton: React.FC = () => {
         });
 
         // Set terminal as ready to setup the event listener
-        setTerminalReady(true);
+        // setTerminalReady(true);
     };
 
-    useEffect(() => {
-        if (terminalReady) {
-            const modalElement = document.querySelector('#jupiter-terminal'); // Adjust this selector based on actual modal class or ID
+    // useEffect(() => {
+    //     if (terminalReady) {
+    //         const modalElement = document.querySelector('#jupiter-terminal'); // Adjust this selector based on actual modal class or ID
 
-            const handleInput = (event: Event) => {
-                const target = event.target as HTMLInputElement;
-                if (target && target.value.startsWith('.')) {
-                    target.value = target.value.replace(/^\./, ''); // Remove leading period and replace with 0.
-                }
-            };
+    //         const handleInput = (event: Event) => {
+    //             const target = event.target as HTMLInputElement;
+    //             if (target && target.value.startsWith('.')) {
+    //                 target.value = target.value.replace(/^\./, ''); // Remove leading period and replace with 0.
+    //             }
+    //         };
 
-            modalElement?.addEventListener('input', handleInput as EventListener, true);
+    //         modalElement?.addEventListener('input', handleInput as EventListener, true);
 
-            // Clean up the event listener when component unmounts
-            return () => {
-                modalElement?.removeEventListener('input', handleInput as EventListener, true);
-            };
-        }
-    }, [terminalReady]);
+    //         // Clean up the event listener when component unmounts
+    //         return () => {
+    //             modalElement?.removeEventListener('input', handleInput as EventListener, true);
+    //         };
+    //     }
+    // }, [terminalReady]);
 
     return (
         <button onClick={handleTerminalInit} className='button-primary'>
