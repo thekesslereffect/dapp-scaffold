@@ -753,7 +753,7 @@ const FlappyPootGame = () => {
               <h3 className="text-5xl font-bold">LEADERBOARD</h3>
               <ul className='flex flex-col text-xl w-full gap-2'>
                   {leaderboard.map((entry, index) => (
-                      <a key={index} className='flex flex-row justify-between gap-4 cursor-pointer'><div>{formatAddress(entry.walletAddress)}</div><div>{entry.score}</div></a>
+                      <a key={index} href={'https://solscan.io/account/'+entry.walletAddress} target='_blank' className='flex flex-row justify-between gap-4 cursor-pointer'><div>{formatAddress(entry.walletAddress)}</div><div>{entry.score}</div></a>
                   ))}
               </ul>
           </div>
