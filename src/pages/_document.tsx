@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html className='bg-[var(--body-color)]'>
         <Head>
         <link rel="shortcut icon" href="/favicon.ico"/>
         <script src="https://terminal.jup.ag/main-v2.js" data-preload />

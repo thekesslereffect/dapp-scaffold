@@ -9,7 +9,6 @@ https://coindiscovery.app
 https://www.coinhot.org
 https://coinvote.cc
 https://cryptonextgem.com
-https://coinbusters.cc
 https://cointoplist.net
 https://freshcoins.io
 https://gemfinder.cc
@@ -28,7 +27,6 @@ https://top100token.com
 https://www.rugfreecoins.com
 https://coinalpha.app
 https://coinbazooka.com
-
 
 
 

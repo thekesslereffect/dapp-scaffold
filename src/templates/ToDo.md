@@ -1,9 +1,10 @@
 04/15/24
-◼️ Swap integration on website (Jupiter Terminal?)
-◼️ Set up RPC for web wallet
+✅Swap integration on website (Jupiter Terminal?)
+✅Set up RPC for web wallet
 ◼️ Youtube video
 ◼️ GOOD CAUSE milestone Twitter announcement
-◼️ 3D Filters for Instagram
+◼️ 3D Filters for Instagram using Lens Studio (look up tutorial)
+◼️ Sticker pack (build a poot style sticker sheet?)
 
 Backlog
 ◼️ Merch designs
