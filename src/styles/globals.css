@@ -454,7 +454,8 @@ option{
 
 .button-secondary{
   color: var(--white-color);
-  font-weight: var(--font-bold);
+  font-weight: var(--font-regular);
+  font-size: x-large;
   text-decoration: none;
   transition: color .2s;
   cursor: pointer;
