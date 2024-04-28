@@ -24,6 +24,7 @@ import 'remixicon/fonts/remixicon.css';
 // Jupiter swap
 import JupiterTerminalButton from 'components/JupiterTerminalButton';
 import CharacterPop from 'components/CharacterPop';
+import MemeGenerator from 'components/MemeGenerator';
 
 export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
@@ -161,6 +162,10 @@ export const HomeView: FC = ({ }) => {
 
          <div className="spacer"></div>
          <PfpGenerator/>
+
+
+         <div className="spacer"></div>
+         <MemeGenerator/>
         
 
 
