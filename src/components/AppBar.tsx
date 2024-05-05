@@ -50,6 +50,7 @@ export const AppBar: React.FC = () => {
             <option value="id">🇮🇩 Indonesian</option>
             <option value="ro">🇷🇴 Română</option>
             <option value="vn">🇻🇳 Tiếng Việt</option>
+            <option value="ar">🇸🇦 العربية</option>
           </select>
         </div>
         <div>

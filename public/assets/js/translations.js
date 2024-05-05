@@ -8,6 +8,7 @@ const translations = {
     "ro": "Acasă",
     "fr": "Accueil",
     "vn": "Trang chủ",
+    "ar":"الرئيسية",
   },
   "how": {
     "en": "How",
@@ -17,6 +18,7 @@ const translations = {
     "ro": "Cum funcționează?",
     "fr": "Fonctionnement",
     "vn": "Tính năng",
+    "ar":"كيف",
   },
   "build": {
     "en": "Build",
@@ -26,6 +28,7 @@ const translations = {
     "ro": "Generează",
     "fr": "Fais ton poot!",
     "vn": "Custom",
+    "ar":"بناء",
   },
   "tokenomics": {
     "en": "Tokenomics",
@@ -35,6 +38,7 @@ const translations = {
     "ro": "Economia",
     "fr": "Tokenomics",
     "vn": "Tokenomics",
+    "ar":"الاقتصاد الرمزي",
   },
   "merch": {
     "en": "Merch",
@@ -44,6 +48,7 @@ const translations = {
     "ro": "Merch",
     "fr": "Boutique",
     "vn": "Merch",
+    "ar":"المنتجات",
   },
   "socials": {
     "en": "Socials",
@@ -53,6 +58,7 @@ const translations = {
     "ro": "Pagini Sociale",
     "fr": "Réseaux sociaux",
     "vn": "Mạng xã hội",
+    "ar":"العربية",
   },
   "home-title": {
     "en": "SOLANA'S <br><span>#2</span> MEMECOIN<br>",
@@ -62,6 +68,7 @@ const translations = {
     "ro": "AL DOILEA MEME COIN DIN ECOSISTEMUL <br>SOLANA",
     "fr": "MEMECOIN <span>#2</span> SUR <br>SOLANA",
     "vn": "<span>#2</span> MEMECOIN <br>TRÊN NỀN TẢNG SOLANA",
+    "ar":"العملة الميمية رقم 2 على سولانا",
   },
   "home-description": {
     "en": "Hi, I'm Poot, the only coin that's honest about what it is, a shitcoin! In a market full of speculation, we're keeping it real - and regular. Embrace the movement with us!",
@@ -71,6 +78,7 @@ const translations = {
     "ro": "Salutare, sunt Poot, singura monedă care este sinceră când vine vorba de existența sa, sunt un shitcoin aka o monedă de “cacao”! Intr-o piață plină de speculații, noi păstrăm totul pe bune. Alăturați-vă mișcării alături de noi!",
     "fr": "Yo, je suis Poot, le seul token honnête sur qui il est vraiment, un shitcoin! Dans un marché plein de spé.CUL.ations, je reste simple et franc sur ce que je suis. Toi aussi, soit vrai, investis sur la franchise avec nous !",
     "vn": "Xin chào, tôi là Poot, loại coin duy nhất thành thực về bản chất của nó, một shitcoin! Trong một thị trường đầy rẫy những đầu cơ, chúng tôi sẽ luôn luôn giữ nó một cách thực tế nhất có thể. Hãy đồng hành cùng chúng tôi!",
+    "ar":"مرحباً، أنا بوت، العملة الوحيدة التي تصارح بحقيقتها، عملة خرا!في سوق مليء بالتكهنات، نحافظ على الأمور واقعية ومستمرة. انضم إلى حركتنا!",
   },
   "home-button-main": {
     "en": "GET POOT!",
@@ -80,6 +88,7 @@ const translations = {
     "ro": "OBȚINE POOT!",
     "fr": "SOIT POOT!",
     "vn": "HÃY LÀ POOT!",
+    "ar":"احصل على بوت!",
   },
   "home-button-secondary": {
     "en": "The Roadmap",
@@ -89,6 +98,7 @@ const translations = {
     "ro": "Plan de dezvoltare",
     "fr": "La Roadmap",
     "vn": "Lộ trình",
+    "ar":"خارطة الطريق",
   },
   "how-title": {
     "en": "HOW <span>POOT</span> WORKS",
@@ -98,6 +108,7 @@ const translations = {
     "ro": "CUM FUNCȚIONEAZĂ <span>POOT</span>",
     "fr": "COMMENT POOT FONCTIONNE",
     "vn": "CÁCH HOẠT ĐỘNG CỦA <span>POOT</span>",
+    "ar":"كيفية عمل بوت",
   },
   "how-description": {
     "en": "Just like your morning routine, Poot is simple and straightforward. Invest, hold, and watch your portfolio grow. Careful though! You may need a plunger.",
@@ -107,6 +118,7 @@ const translations = {
     "ro": "Totul este la fel de simplu ca rutina de dimineață , Poot este simplu si direct. Investește, ține bine de moneda și privește cum îți crește portofoliul . Atenție! S-ar putea sa ai nevoie de o pompă de desfundat toaleta.",
     "fr": "Tu vois ta routine matinale ? Poot c’est la même ! Il est simple et va droit au but. Investis, garde au chaud, et regarde ton portefeuille prendre de l’ampleur. Attention quand même ! Tu auras peut-être besoin d'un piston si ça se bouche",
     "vn": "Cũng giống như thói quen buổi sáng của bạn, Poot rất đơn giản và dễ hiểu. Đầu tư, nắm giữ và xem portfolio của bạn từ từ phát triển. Tuy nhiên hãy cẩn thận, vì bạn có thể phải cần đến một cây hút bồn cầu đấy!",
+    "ar":"بساطة بوت تشبه روتين صباحك، بسيطة وواضحة. استثمر، احتفظ، وشاهد محفظتك تنمو. لكن كن حذراً! قد تحتاج إلى سدادة.",
   },
   "how-ingest": {
     "en": "Ingest",
@@ -116,6 +128,7 @@ const translations = {
     "ro": "Ingerează",
     "fr": "Ingère",
     "vn": "Đầu tư",
+    "ar":"استوعب",
   },
   "how-clench": {
     "en": "Clench",
@@ -125,6 +138,7 @@ const translations = {
     "ro": "Ține strâns",
     "fr": "Retiens",
     "vn": "Nắm chặt",
+    "ar":"احتفظ",
   },
   "how-grow": {
     "en": "Grow!",
@@ -134,6 +148,7 @@ const translations = {
     "ro": "Crește!",
     "fr": "Grossis!",
     "vn": "Phát triển!",
+    "ar":"تنمو!",
   },
   "games-title": {
     "en": "PLAY WITH <span>POOT</span>",
@@ -143,6 +158,7 @@ const translations = {
     "ro": "PLAY WITH <span>POOT</span>",
     "fr": "PLAY WITH <span>POOT</span>",
     "vn": "PLAY WITH <span>POOT</span>",
+    "ar":"PLAY WITH <span>POOT</span>",
   },
   "build-generate": {
     "en": "Generate!",
@@ -152,6 +168,7 @@ const translations = {
     "ro": "Generează!",
     "fr": "Générer!",
     "vn": "Random!",
+    "ar":"ابدأ!",
   },
   "build-save": {
     "en": "Save",
@@ -161,6 +178,7 @@ const translations = {
     "ro": "Salvează",
     "fr": "Enregistre",
     "vn": "Lưu PFP",
+    "ar":"حفظ الصورة الشخصية",
   },
   "build-expressions": {
     "en": "Expression",
@@ -170,6 +188,7 @@ const translations = {
     "ro": "Expresie",
     "fr": "Expression",
     "vn": "Cảm xúc",
+    "ar":"تعبير",
   },
   "build-eyes": {
     "en": "Eyes",
@@ -179,6 +198,7 @@ const translations = {
     "ro": "Ochi",
     "fr": "Yeux",
     "vn": "Mắt",
+    "ar":"عيون",
   },
   "build-mouths": {
     "en": "Mouth",
@@ -188,6 +208,7 @@ const translations = {
     "ro": "Gură",
     "fr": "Bouche",
     "vn": "Miệng",
+    "ar":"فم",
   },
   "build-shadows": {
     "en": "Shadow",
@@ -197,6 +218,7 @@ const translations = {
     "ro": "Umbră",
     "fr": "Details",
     "vn": "Tô bóng",
+    "ar":"ظل",
   },
   "build-bodies": {
     "en": "Body",
@@ -206,6 +228,7 @@ const translations = {
     "ro": "Corp",
     "fr": "Forme",
     "vn": "Thân hình",
+    "ar":"جسم",
   },
   "build-backgrounds": {
     "en": "Background",
@@ -215,6 +238,7 @@ const translations = {
     "ro": "Fundal",
     "fr": "Arrière plan",
     "vn": "Hình nền",
+    "ar":"خلفية",
   },
   "tokenomics-title": {
     "en": "ROOT'N TOOT'N<br><span>POOT'N</span>ONOMICS",
@@ -224,6 +248,7 @@ const translations = {
     "ro": "Economia tokenului <span>POOT</span>",
     "fr": "ROOT'N TOOT'N<br><span>POOT'N</span>ONOMICS",
     "vn": "TOKENOMICS",
+    "ar":"اقتصاديات بوت المثيرة",
   },
   "tokenomics-dev-title": {
     "en": "Dev's Stash",
@@ -233,6 +258,7 @@ const translations = {
     "ro": "Sacoșa dezvoltatorului",
     "fr": "Réserve feDEVrale",
     "vn": "Kinh phí cho các nhà phát triển",
+    "ar":"مخزن المطورين",
   },
   "tokenomics-dev-description": {
     "en": "To keep our devs fueling the backend where the real magic happens!",
@@ -242,6 +268,7 @@ const translations = {
     "ro": "Este folosita pentru a alimenta dezvoltarea de tip back-end creată de programatorii noștri.",
     "fr": "Pour que nos développeurs continuent à alimenter les besoins là où la magie opère !",
     "vn": "Để giúp các nhà phát triển của chúng tôi tiếp tục thúc đẩy phần hậu kì, nơi điều kỳ diệu thực sự xảy ra!",
+    "ar":"لتزويد مطورينا بما يلزم لتطوير الواجهة الخلفية حيث تحدث السحر!",
   },
   "tokenomics-treasury-title": {
     "en": "Treasury Fund",
@@ -251,6 +278,7 @@ const translations = {
     "ro": "Trezoreria",
     "fr": "Fonds de réserve",
     "vn": "Quỹ tài chính",
+    "ar":"صندوق الخزين",
   },
   "tokenomics-treasury-description": {
     "en": "This is our fragrance of fortune, our eau de toilette, used for giveaways to bring in newcomers with the promising scent of Poot profits! 2% of these funds will go towards 'GOOD CAUSE' initiatives and charities, ensuring we can smear Poot all around the globe!",
@@ -260,6 +288,7 @@ const translations = {
     "ro": "Aceasta reprezintă mirosul succesului, apa noastră de toaleta, folosită pentru giveaway-uri cu scopul de a aduce lume noua cu promisiunea mirosului de profit oferit de Poot!",
     "fr": "C’est notre parfum de fortune, notre eau de toilette, utilisée pour les concours (giveaways) avec la promesse de faire des profits avec Poot!",
     "vn": "Đây là loại nước hoa may mắn, là eau de toilette của chúng tôi, được sử dụng làm quà tặng để thu hút những người mới nhập cuộc với mùi hương đầy hứa hẹn mang lại lợi nhuận Poot! 2% trong quỹ tài chính này sẽ dành cho các sáng kiến và tổ chức từ thiện 'GOOD CAUSE', đảm bảo chúng ta có thể mang Poot đi khắp toàn cầu!",
+    "ar":"هذا عطر حظنا، ماء التواليت الذي نستخدمه في الهدايا لجذب المستجدين برائحة أرباح بوت الواعدة!",
   },
   "tokenomics-liquidity-title": {
     "en": "The Big Splash",
@@ -269,6 +298,7 @@ const translations = {
     "ro": "The Big Splash",
     "fr": "Le gros Splash",
     "vn": "Bể thanh khoản",
+    "ar":"الضربة الكبيرة",
   },
   "tokenomics-liquidity-description": {
     "en": "Dropping your kids off at the pool? We're dropping 90% of our Poot into the liquidity pool and burning the LP tokens, ensuring our pool's always full and forever fun!",
@@ -278,6 +308,7 @@ const translations = {
     "ro": "Noi am “aruncat” 90% din monedele Poot in fondul de lichiditate pentru a ne asigura ca “pool-ul nostru de lichiditate este mereu plin si distractiv.",
     "fr": "Ça vous arrive de déposer vos enfants à la piscine ? Nous, on dépose 90% des Poot dans la réserve de liquidités et les token de LP sont brûlés, ça garantit une réserve toujours pleine et bien fun!",
     "vn": "Chúng tôi thả 90% Poot của mình vào bể thanh khoản và đốt các token LP, đảm bảo bể thanh khoản của chúng ta luôn đầy và luôn vui!",
+    "ar":"هل تركت أطفالك عند المسبح؟ نحن نسقط 90% من بوت في مجمع السيولة ونحرق رموز LP، لضمان بقاء المسبح ممتلئ",
   },
   "tokenomics-burn-title": {
     "en": "Burn Baby Burn!",
@@ -287,6 +318,7 @@ const translations = {
     "ro": "Burn Baby Burn!",
     "fr": "Brûle Baby Brûle !",
     "vn": "Cháy lên đi lửa trên cao nguyên!",
+    "ar":"احرق حبيبي احرق!",
   },
   "tokenomics-burn-description": {
     "en": "100% of the LP Tokens have been burnt. So, you don't need to worry about getting into a sticky shituation.",
@@ -296,6 +328,7 @@ const translations = {
     "ro": "100% din monedele de lichiditate au fost arse. Acest lucru rezultând in faptul ca nu trebuie sa va temeți ca ați putea ajunge într-o situație de cacao.",
     "fr": "100% des token de liquidités ont été détruits. Donc t’inquiète pas, tu ne vas pas te retrouver dans une situation embarrassante !",
     "vn": "100% số lượng token LP đã bị đốt cháy. Vì vậy, bạn không cần phải lo lắng về việc rơi vào tình trạng bế tắc như bồn cầu đâu!",
+    "ar":"تم حرق 100% من رموز LP. لذا، لا داعي للقلق من الوقوع في موقف لزج.",
   },
   "merch-title": {
     "en": "CATCH THE LATEST <span>DROP</span>",
@@ -305,6 +338,7 @@ const translations = {
     "ro": "PRINDE ULTIMA COLECȚIE <span>POOT</span>",
     "fr": "RESTE ALERTÉ DE LA DERNIÈRE INFO!",
     "vn": "CẬP NHẬT MERCH GẦN ĐÂY NHẤT",
+    "ar":"احصل على آخر المستجدات",
   },
   "merch-description": {
     "en": "Currently polishing our first merch drop! Hope you stay glued to your seats.",
@@ -314,6 +348,7 @@ const translations = {
     "ro": "Momentan încă lucrăm la merch-ul nostru! Sperăm sa aveți răbdare.",
     "fr": "Nous peaufinons actuellement notre première sortie de produits dérivés ! J'espère que ça va vous surprendre !",
     "vn": "Hiện đang trong giai đoạn hậu kì cho loạt merch đầu tiên của chúng tôi! Hy vọng bạn sẽ mong chờ và không rời mắt khỏi điều tuyệt vời này.",
+    "ar":"نقوم حاليًا بتلميع أول إصدار لمنتجاتنا! نأمل أن تبقى متحمسًا.",
   },
   "merch-comingsoon": {
     "en": "COMING SOON!",
@@ -323,6 +358,7 @@ const translations = {
     "ro": "COMING SOON!",
     "fr": "À VENIR!",
     "vn": "COMING SOON!",
+    "ar":"قريباً!",
   },
   "socials-title": {
     "en": "JOIN THE <span>MOVEMENT</span>",
@@ -332,6 +368,7 @@ const translations = {
     "ro": "Alăturați-vă mișcării!",
     "fr": "REJOIGNEZ LE MOUVEMENT",
     "vn": "ĐỒNG HÀNH CÙNG CHÚNG TÔI",
+    "ar":"انضم إلى الحركة",
   },
   "socials-description": {
     "en": "Stay Regular with Us on All Platforms!",
@@ -341,6 +378,7 @@ const translations = {
     "ro": "Rămâneți aproape de noi pe toate platformele!",
     "fr": "Restez connectés avec nous sur toutes les plateformes!",
     "vn": "Tương tác cùng chúng tôi trên tất cả các nền tảng!",
+    "ar":"تواصل معنا بانتظام عبر جميع المنصات!",
   },
   "footer-rights": {
     "en": "&#169; All Rights Reserved By Poot.lol",
@@ -350,6 +388,7 @@ const translations = {
     "ro": "&#169; Toate drepturile sunt rezervate de Poot.lol",
     "fr": "&#169; Poot.lol Tous droits réservés.",
     "vn": "&#169; All Rights Reserved By Poot.lol",
+    "ar":"&#169; جميع الحقوق محفوظة لـ Poot.lol",
   },
   "footer-description": {
     "en": "Solana's <span>#2</span> memecoin. For partnership inquiries, email poot.lol@proton.me",
@@ -359,6 +398,7 @@ const translations = {
     "ro": "Solana's #2 memecoin. Pentru parteneriate vă rugăm sa ne contactați pe adresa de email poot.lol@proton.me (e-mail disponibil numai in limba engleză)",
     "fr": "Memecoin #2 sur Solana. Pour des partenariats ou des proposions, envoyez un email à poot.lol@proton.me",
     "vn": "Solana's <span>#2</span> memecoin. For partnership inquiries, email poot.lol@proton.me",
+    "ar":"عملة الميم الثانية على سولانا. للاستفسارات حول الشراكات، راسلنا على: poot.lol@proton.me",
   },
 
 };
