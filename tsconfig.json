@@ -17,7 +17,7 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","global.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","global.d.ts", "src/views/wormhole/index.jsx"],
   "exclude": ["node_modules", ".next",],
   "ts-node": {
     "require": ["tsconfig-paths/register"],
