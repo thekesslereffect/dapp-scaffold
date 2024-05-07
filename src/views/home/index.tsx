@@ -226,7 +226,11 @@ export const HomeView: FC = ({ }) => {
             </h2>
             <p dangerouslySetInnerHTML={{ __html: translations["merch-description"][language] }} className="shop__description" />
             <h1 className="shop__comingsoon">
-               <p dangerouslySetInnerHTML={{ __html: translations["merch-comingsoon"][language] }} />
+               {/* <p dangerouslySetInnerHTML={{ __html: translations["merch-comingsoon"][language] }} /> */}
+               <a href="https://poot.store" target="_blank" rel="noreferrer" className="button-primary">
+                  {/* <p dangerouslySetInnerHTML={{ __html: translations["home-button-secondary"][language] }} /> */}
+                  <p>Visit the Store!</p>
+               </a>
             </h1>
          </section>
 
