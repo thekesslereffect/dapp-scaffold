@@ -25,7 +25,7 @@ const PootCalc = () => {
     return (
         <div className='flex flex-col gap-4  items-center text-center w-full max-w-screen-sm'>
           <h2 className="section__title new__title">
-          Got enough <span>Poot?</span>
+          GOT ENOUGH <span>POOT?</span>
           </h2>
             <div className='text-6xl font-bold rounded py-3 px-4 '>
               <p className=''>
