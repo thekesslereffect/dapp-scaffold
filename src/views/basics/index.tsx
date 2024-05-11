@@ -4,6 +4,7 @@ import { SignMessage } from '../../components/SignMessage';
 import { SendTransaction } from '../../components/SendTransaction';
 import { SendVersionedTransaction } from '../../components/SendVersionedTransaction';
 import SubmitScoreTest from "components/SubmitScoreTest";
+import PootCalc from "components/PootCalc";
 
 export const BasicsView: FC = ({ }) => {
 
@@ -18,6 +19,7 @@ export const BasicsView: FC = ({ }) => {
           <SignMessage />
           <SendTransaction />
           <SendVersionedTransaction />
+          <PootCalc/>
           {/* <SubmitScoreTest/> */}
         </div>
       </div>

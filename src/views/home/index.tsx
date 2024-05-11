@@ -25,6 +25,7 @@ import 'remixicon/fonts/remixicon.css';
 import JupiterTerminalButton from 'components/JupiterTerminalButton';
 import CharacterPop from 'components/CharacterPop';
 import MemeGenerator from 'components/MemeGenerator';
+import PootCalc from 'components/PootCalc';
 
 export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
@@ -123,6 +124,12 @@ export const HomeView: FC = ({ }) => {
                </div>
             </div>
          </section>
+
+         <div className="spacer"></div>
+         <div className='flex flex-col w-full items-center'>
+            <PootCalc/>
+         </div>
+         
 
          <div className="spacer"></div>
          <section className="flex flex-col max-w-3xl mx-auto">
