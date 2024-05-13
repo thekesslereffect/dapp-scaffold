@@ -273,6 +273,9 @@ export const HomeView: FC = ({ }) => {
                         <a href="https://dexscreener.com/solana/bynsx139gt2wv3mdqzfjji5yu1zsr8uup3fdapghjje8" target="_blank" rel="noreferrer">
                            <img src="assets/img/dexscreener.png" alt="image" className="contact__icon"/>
                         </a>
+                        <a href="https://coininn.com" target="_blank" rel="noreferrer">
+                           <img src="assets/img/coininn.png" alt="image" className="contact__icon"/>
+                        </a>
                      </div>
                  
                </div>
