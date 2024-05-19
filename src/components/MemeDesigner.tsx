@@ -27,32 +27,18 @@ interface TextProps {
   scaleY?: number;
 }
 
-const BackgroundImage: React.FC<{ src: string }> = ({ src }) => {
+const BackgroundImage: React.FC<{ src: string; stageWidth: number }> = ({ src, stageWidth }) => {
   const [img] = useImage(src);
-  const [dimensions, setDimensions] = useState<{ width: number, height: number, x: number, y: number }>({ width: 800, height: 600, x: 0, y: 0 });
+  const [dimensions, setDimensions] = useState<{ width: number, height: number, x: number, y: number }>({ width: 0, height: 0, x: 0, y: 0 });
 
   useEffect(() => {
     if (img) {
       const aspectRatio = img.width / img.height;
-      const canvasWidth = 800;
-      const canvasHeight = 600;
-      let width, height, x, y;
-
-      if (canvasWidth / canvasHeight > aspectRatio) {
-        width = canvasHeight * aspectRatio;
-        height = canvasHeight;
-        x = (canvasWidth - width) / 2;
-        y = 0;
-      } else {
-        width = canvasWidth;
-        height = canvasWidth / aspectRatio;
-        x = 0;
-        y = (canvasHeight - height) / 2;
-      }
-
-      setDimensions({ width, height, x, y });
+      const width = stageWidth;
+      const height = stageWidth / aspectRatio;
+      setDimensions({ width, height, x: 0, y: 0 });
     }
-  }, [img]);
+  }, [img, stageWidth]);
 
   return <Image image={img} x={dimensions.x} y={dimensions.y} width={dimensions.width} height={dimensions.height} />;
 };
@@ -165,15 +151,16 @@ const URLText: React.FC<{
           if (node) {
             const scaleX = node.scaleX();
             const scaleY = node.scaleY();
+            const newFontSize = text.fontSize * scaleX;
             node.scaleX(1);
             node.scaleY(1);
             onChange({
               ...text,
               x: node.x(),
               y: node.y(),
-              fontSize: text.fontSize * Math.abs(scaleX),
-              scaleX: scaleX,
-              scaleY: scaleY,
+              fontSize: newFontSize,
+              scaleX: 1,
+              scaleY: 1,
               rotation: node.rotation(),
             });
           }
@@ -184,13 +171,29 @@ const URLText: React.FC<{
   );
 };
 
+
 const MemeDesigner: React.FC = () => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
   const [images, setImages] = useState<ImageProps[]>([]);
   const [texts, setTexts] = useState<TextProps[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [stageWidth, setStageWidth] = useState<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
   const backgroundFileInputRef = useRef<HTMLInputElement>(null);
   const imageFileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (containerRef.current) {
+        setStageWidth(containerRef.current.offsetWidth);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const addBackgroundImage = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -232,7 +235,7 @@ const MemeDesigner: React.FC = () => {
         x: 50,
         y: 50,
         fontSize: 20,
-        fontFamily: 'Arial',
+        fontFamily: 'Jua',
         fill: 'black',
         id: `text${texts.length + 1}`,
         scaleX: 1,
@@ -298,110 +301,99 @@ const MemeDesigner: React.FC = () => {
 
   return (
     <div>
-      <section className="build__container section container" id="build">
-        <h2 className="section__title new__title">
-          MEME DESIGNER
-        </h2>
-        <div className="flex-grow">
-        <div className="flex justify-center items-center h-full border-dashed border-white border-4 p-8 rounded-[2rem]">
-
-        <Stage
-        width={800}
-        height={600}
-        ref={stageRef}
-        onMouseDown={(e) => {
-          if (e.target === e.target.getStage()) {
-            setSelectedId(null);
-          }
-        }}
-      >
-        <Layer>
-          {backgroundImage && <BackgroundImage src={backgroundImage} />}
-          {images.map((image, i) => (
-            <URLImage
-              key={i}
-              image={image}
-              isSelected={image.id === selectedId}
-              onSelect={() => handleSelect(image.id)}
-              onChange={handleChangeImage}
-            />
-          ))}
-          {texts.map((text, i) => (
-            <URLText
-              key={i}
-              text={text}
-              isSelected={text.id === selectedId}
-              onSelect={() => handleSelect(text.id)}
-              onChange={handleChangeText}
-            />
-          ))}
-        </Layer>
-      </Stage>
-      </div>
-      
-    </div>
-      <div className='mt-4'>
-        <button onClick={() => backgroundFileInputRef.current?.click()}>Add Background Image</button>
-        <input
-          type="file"
-          ref={backgroundFileInputRef}
-          style={{ display: 'none' }}
-          onChange={addBackgroundImage}
-          accept="image/*"
-        />
-      </div>
-      <div>
-        <button onClick={() => imageFileInputRef.current?.click()}>Add Image</button>
-        <input
-          type="file"
-          ref={imageFileInputRef}
-          style={{ display: 'none' }}
-          onChange={addImage}
-          accept="image/*"
-        />
-      </div>
-      <div>
-        <button onClick={addText}>Add Text</button>
-        {selectedId && texts.some((text) => text.id === selectedId) && (
-          <div>
-            <input
-              type="text"
-              className='text-black p-2 text-center flex w-full'
-              value={texts.find((text) => text.id === selectedId)?.text || ''}
-              onChange={(e) =>
-                handleChangeText({
-                  ...texts.find((text) => text.id === selectedId)!,
-                  text: e.target.value,
-                })
+      <section className="memedesigner__container section w-full">
+        <h2 className="section__title new__title">MEME DESIGNER</h2>
+        <div className='flex items-center w-full  max-w-3xl h-[560px] self-center justify-center border-dashed border-white border-4 p-4 md:p-8 rounded-[2rem]'>
+        <div className="flex flex-col w-full self-center"  ref={containerRef}>
+          <Stage
+            width={stageWidth}
+            height={500}
+            ref={stageRef}
+            onMouseDown={(e) => {
+              if (e.target === e.target.getStage()) {
+                setSelectedId(null);
               }
-            />
-            <select
-              onChange={(e) =>
-                handleChangeText({
-                  ...texts.find((text) => text.id === selectedId)!,
-                  fontFamily: e.target.value,
-                })
-              }
-              value={texts.find((text) => text.id === selectedId)?.fontFamily || ''}
-            >
-              <option value="Arial">Arial</option>
-              <option value="Impact">Impact</option>
-              <option value="Times New Roman">Times New Roman</option>
-              <option value="Comic Sans MS">Comic Sans MS</option>
-            </select>
-            <button onClick={() => handleTextColorChange('black')}>Black</button>
-            <button onClick={() => handleTextColorChange('white')}>White</button>
-          </div>
-        )}
-      </div>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={handleSave}>Save Meme</button>
-
-    </section>
-
-      
-      
-    
+            }}
+          >
+            <Layer>
+              {backgroundImage && <BackgroundImage src={backgroundImage} stageWidth={stageWidth} />}
+              {images.map((image, i) => (
+                <URLImage
+                  key={i}
+                  image={image}
+                  isSelected={image.id === selectedId}
+                  onSelect={() => handleSelect(image.id)}
+                  onChange={handleChangeImage}
+                />
+              ))}
+              {texts.map((text, i) => (
+                <URLText
+                  key={i}
+                  text={text}
+                  isSelected={text.id === selectedId}
+                  onSelect={() => handleSelect(text.id)}
+                  onChange={handleChangeText}
+                />
+              ))}
+            </Layer>
+          </Stage>
+        </div>
+        </div>
+        <div className="mt-4"></div>
+        <button className='self-center max-w-sm justify-center button-primary mb-4' onClick={handleSave}>Save Meme</button>
+          <button className='self-center max-w-sm justify-center button-secondary' onClick={() => backgroundFileInputRef.current?.click()}>Add Background Image</button>
+          <input
+            type="file"
+            ref={backgroundFileInputRef}
+            style={{ display: 'none' }}
+            onChange={addBackgroundImage}
+            accept="image/*"
+          />
+          <button className='self-center max-w-sm justify-center button-secondary' onClick={() => imageFileInputRef.current?.click()}>Add Image</button>
+          <input
+            type="file"
+            ref={imageFileInputRef}
+            style={{ display: 'none' }}
+            onChange={addImage}
+            accept="image/*"
+          />
+          <button className='self-center max-w-sm justify-center button-secondary' onClick={addText}>Add Text</button>
+          {selectedId && texts.some((text) => text.id === selectedId) && (
+            <div className='flex flex-col max-w-5xl self-center'>
+              <input
+                type="text"
+                className="text-black p-2 text-center flex w-full"
+                value={texts.find((text) => text.id === selectedId)?.text || ''}
+                onChange={(e) =>
+                  handleChangeText({
+                    ...texts.find((text) => text.id === selectedId)!,
+                    text: e.target.value,
+                  })
+                }
+              />
+              <select
+                onChange={(e) =>
+                  handleChangeText({
+                    ...texts.find((text) => text.id === selectedId)!,
+                    fontFamily: e.target.value,
+                  })
+                }
+                value={texts.find((text) => text.id === selectedId)?.fontFamily || ''}
+              >
+                <option value="Jua">Jua</option>
+                <option value="Sniglet">Sniglet</option>
+                <option value="Impact">Impact</option>
+                {/* <option value="Times New Roman">Times New Roman</option> */}
+                {/* <option value="Comic Sans MS">Comic Sans MS</option> */}
+                
+              </select>
+              <button className='self-center max-w-sm justify-center button-secondary' onClick={() => handleTextColorChange('black')}>Black</button>
+              <button className='self-center max-w-sm justify-center button-secondary' onClick={() => handleTextColorChange('white')}>White</button>
+            </div>
+          )}
+        <button  className='self-center max-w-sm justify-center button-secondary'onClick={handleDelete}>Delete</button>
+        
+      </section>
     </div>
   );
 };

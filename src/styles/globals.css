@@ -467,7 +467,12 @@ option{
 }
 
 
-
+.memedesigner__container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
 
 /*=============== BUILD A POOT ===============*/
 .build__container{
