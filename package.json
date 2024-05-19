@@ -37,7 +37,7 @@
     "react-konva": "^18.2.10",
     "react-resizable": "^3.0.5",
     "remixicon": "^4.2.0",
-    "use-image": "^1.1.1",
+    "use-image": "^1.1.1", 
     "zustand": "^3.6.9"
   },
   "devDependencies": {
