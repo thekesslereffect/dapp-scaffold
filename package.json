@@ -24,7 +24,7 @@
     "html2canvas": "^1.4.1",
     "immer": "^9.0.12",
     "kaboom": "^3000.1.17",
-    "konva": "^9.3.6",
+    "konva": "^9.3.8",
     "mongoose": "^8.3.1",
     "next": "^13.1.5",
     "next-compose-plugins": "^2.2.1",

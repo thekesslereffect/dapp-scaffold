@@ -26,6 +26,7 @@ import JupiterTerminalButton from 'components/JupiterTerminalButton';
 import CharacterPop from 'components/CharacterPop';
 import MemeGenerator from 'components/MemeGenerator';
 import PootCalc from 'components/PootCalc';
+import MemeDesigner from 'components/MemeDesigner';
 
 export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
@@ -170,12 +171,11 @@ export const HomeView: FC = ({ }) => {
          <div className="spacer"></div>
          <PfpGenerator/>
 
+         <div className="spacer"></div>
+         <MemeDesigner/>
 
          <div className="spacer"></div>
          <MemeGenerator/>
-        
-
-
 
          <div className="spacer"></div>
          <section className="tokenomics section" id="tokenomics">

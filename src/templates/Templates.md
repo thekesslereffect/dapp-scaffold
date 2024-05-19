@@ -53,8 +53,22 @@ Buy Bot Template
 
 
 
-
 Giveaway Template
+
+💩 $200 $POOT GIVEAWAY 💩
+
+Hey, space cadets! 🌌 Your friend Poot here, ready to fuel your journey with a stellar giveaway! As we gear up for our next big adventure to Uranus, I'm giving away $20 worth of $POOT to 10 lucky pioneers in just 48hrs.
+
+👉 FOLLOW @PootCoinSol
+💩 TAG a Friend
+🤎 LIKE & RT
+
+Join the mission and let's blast off together to the stars (and beyond)! 🚀🪐
+
+#SolanaMemecoin
+
+
+Giveaway Collab Template
 
 💩$50 COMMUNITY GIVEAWAY 💩
 
@@ -64,7 +78,6 @@ Giveaway Template
 
 👉 FOLLOW @PootCoinSol & @0xBeenbroke
 🤎 LIKE & RT
-💬 COMMENT SOL ADDRESS
 
 The next giveaway will be double so let’s keep the $POOT streak going! 🩲 💩 
 

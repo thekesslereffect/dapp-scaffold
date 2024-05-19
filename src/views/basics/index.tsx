@@ -5,6 +5,7 @@ import { SendTransaction } from '../../components/SendTransaction';
 import { SendVersionedTransaction } from '../../components/SendVersionedTransaction';
 import SubmitScoreTest from "components/SubmitScoreTest";
 import PootCalc from "components/PootCalc";
+import MemeDesigner from "components/MemeDesigner";
 
 export const BasicsView: FC = ({ }) => {
 
@@ -19,7 +20,8 @@ export const BasicsView: FC = ({ }) => {
           <SignMessage />
           <SendTransaction />
           <SendVersionedTransaction />
-          <PootCalc/>
+          <MemeDesigner/>
+          {/* <PootCalc/> */}
           {/* <SubmitScoreTest/> */}
         </div>
       </div>

@@ -33,6 +33,9 @@ const MemeGenerator: FC = () => {
     return (
       <div>
         <section className="build__container section container" id="build">
+        <h2 className="section__title new__title">
+          MEME LIBRARY
+          </h2>
         <div className="flex-grow">
         <div className="flex justify-center items-center h-full border-dashed border-white border-4 p-8 rounded-[2rem]">
             {currentMedia && (
