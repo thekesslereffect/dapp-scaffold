@@ -12,7 +12,7 @@ class MyDocument extends Document {
       <Html className='bg-[var(--body-color)]'>
         <Head>
         <link rel="shortcut icon" href="/favicon.ico"/>
-        <script src="https://terminal.jup.ag/main-v2.js" data-preload />
+        <script src="https://terminal.jup.ag/main-v3.js" data-preload />
         </Head>
         <body>
           <Main />
